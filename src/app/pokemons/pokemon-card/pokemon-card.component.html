@@ -1,0 +1,22 @@
+ <div class="flip-card">
+   <div class="flip-card-inner">
+     <div class="flip-card-front">
+       <img src={{pokemon.img}} alt="Avatar" style="width:300px;height:280px;">
+     </div>
+     <div class="flip-card-back">
+       <h2 class="poke-name"> {{pokemon.name}} <span> # {{pokemon.id}}</span></h2>
+      <div class="poke-stats">
+        <h4><span class="badge badge-pill badge-info">{{pokemon.height}}</span></h4>
+        <h4><span class="badge badge-pill badge-info">{{pokemon.weight}}</span></h4>
+      </div>
+      <div class="poke-type">
+        <h4 *ngFor="let type of pokemon.type">{{type}}</h4>
+      </div>
+      <h3 class="title-weaknesses"><span class="badge badge-warning">WEAKNESSES</span></h3>
+      <hr>
+      <div class="poke-weaknesses">
+        <h4 *ngFor="let weaknesses of pokemon.weaknesses">{{weaknesses}}</h4>
+      </div>
+     </div>
+   </div>
+ </div>
